@@ -1,19 +1,14 @@
-<script>
-  import Drawer from '$lib/components/shared/layout/Drawer.svelte';
+<script lang="ts">
+  import Footer from './Footer.svelte';
   import Nav from './Nav.svelte';
-  import Queue from './Queue.svelte';
 </script>
 
-<Drawer name="main">
-  <div slot="main">
-    <Nav />
-    <main class="flex h-fit pt-2">
-      <div class="flex h-full w-full">
-        <slot />
-      </div>
+<div>
+  <Nav />
+  <div class=" flex min-h-[calc(100vh_-_64px)] w-full flex-col">
+    <main class="mx-auto mb-[120px] mt-6 flex w-[90%] max-w-7xl flex-grow justify-start p-10">
+      <slot />
     </main>
+    <Footer />
   </div>
-  <div slot="drawer">
-    <Queue />
-  </div>
-</Drawer>
+</div>

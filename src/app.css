@@ -2,23 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-theme='forest'],
-[data-theme='dark'] {
-  @apply scrollbar-track-white/25 scrollbar-thumb-white;
+@font-face {
+  font-family: 'Material Symbols';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('fonts/material-symbols-sharp.woff2') format('woff2');
 }
 
-[data-theme='cupcake'],
-[data-theme='light'] {
-  @apply scrollbar-track-black/25 scrollbar-thumb-black;
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/Gilroy-Regular.ttf') format('truetype');
 }
 
-[data-theme='cyberpunk'] {
-  @apply scrollbar-track-base-300/25 scrollbar-thumb-base-300;
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-style: normal;
+  src: url('fonts/Gilroy-Medium.ttf') format('truetype');
 }
 
-[data-theme='cupcake'],
-[data-theme='forest'] {
-  & .modal-box {
-    @apply rounded-full;
-  }
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 600;
+  font-style: normal;
+  src: url('fonts/Gilroy-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-style: normal;
+  src: url('fonts/Gilroy-Bold.ttf') format('truetype');
+}
+
+.material-symbol {
+  font-family: 'Material Symbols';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+}
+
+body {
+  @apply font-['Gilroy'] font-medium text-[#EBDCDC] antialiased;
+  text-redering: optimzeLegibility;
+}
+
+button,
+a {
+  @apply focus:outline focus:outline-2 focus:outline-white;
 }

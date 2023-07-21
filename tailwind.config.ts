@@ -1,19 +1,21 @@
 import type { Config } from 'tailwindcss';
-import { fontFamily } from 'tailwindcss/defaultTheme';
 import daisyui from 'daisyui';
-import scrollbar from 'tailwind-scrollbar';
 
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Arial', ...fontFamily.sans]
-      }
-    }
-  },
-  plugins: [daisyui, scrollbar],
+  plugins: [daisyui],
   daisyui: {
-    themes: ['light', 'dark', 'forest', 'cupcake', 'cyberpunk']
+    themes: [
+      {
+        dark: {
+          primary: '#FFB3AE',
+          secondary: '#E7BDB9',
+          'base-100': '#1E1414',
+          'base-200': '#2B1C1F',
+          'base-300': '#462D37',
+          'base-content': '#EBDCDC'
+        }
+      }
+    ]
   }
 } satisfies Config;
