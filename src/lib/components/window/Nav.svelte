@@ -23,7 +23,7 @@
   }`}>
   <button on:click={onMenuClick} class="h-12 w-12 rounded-full p-3">
     <label class="swap">
-      <input bind:this={input} type="checkbox" />
+      <input tabindex="-1" bind:this={input} type="checkbox" />
       <i class="material-symbol swap-off">menu</i>
       <i class="material-symbol swap-on">menu_open</i>
     </label>

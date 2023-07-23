@@ -58,7 +58,7 @@
 
 body {
   @apply font-['Gilroy'] font-medium text-[#EBDCDC] antialiased;
-  text-redering: optimzeLegibility;
+  text-rendering: optimizeLegibility;
 }
 
 button,
